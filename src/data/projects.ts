@@ -1,4 +1,6 @@
 import type { Project, TimelineEvent } from '@/types';
+// ✨ 1. 在文件最顶部引入图片大管家（如果你的 images.ts 是小写 i，这里改成小写 i）
+import { AppImages } from '@/assets/images'; 
 
 export const projects: Project[] = [
   {
@@ -14,8 +16,9 @@ export const projects: Project[] = [
       'Assembled those components into a Southern Zen Temple model.',
       'Investigated cultural and historical background of Southern Zen Temple.',
     ],
-    image: '/project1.jpg',
-    images: ['/project1.jpg'],
+    // ✨ 2. 核心修改：去掉引号，直接换成大管家的变量
+    image: AppImages.project1,
+    images: [AppImages.project1],
     files: [],
   },
   {
@@ -31,8 +34,9 @@ export const projects: Project[] = [
       'Designed beam-column connections and detailing',
       'Created comprehensive structural drawings and calculations',
     ],
-    image: '/project2.jpg',
-    images: ['/project2.jpg'],
+    // ✨ 3. 核心修改：去掉引号，直接换成大管家的变量
+    image: AppImages.project2,
+    images: [AppImages.project2],
     files: [],
   },
 ];
