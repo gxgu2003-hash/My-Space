@@ -1,6 +1,6 @@
 import type { Project, TimelineEvent } from '@/types';
 // ✨ 1. 在文件最顶部引入图片大管家（如果你的 images.ts 是小写 i，这里改成小写 i）
-import { AppImages } from '@/assets/images'; 
+import { AppImages } from '@/assets/Images'; 
 
 export const projects: Project[] = [
   {
