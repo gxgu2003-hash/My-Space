@@ -7,7 +7,8 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    // ✨ 关键修改：在这里加上 basename="/My-Space"
+    <Router basename="/My-Space">
       <div className="min-h-screen bg-pixel-bg">
         <Navbar />
         <Routes>
