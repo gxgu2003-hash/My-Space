@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 // ✨ 1. 引入你的图片大管家（如果你的 images.ts 是大写 I，这里写 '@/assets/Images'）
-import { AppImages } from '@/assets/Images'; 
+import { AppImages } from '../assets/Images'; 
 
 export default function Hero() {
   const [displayText, setDisplayText] = useState('');
