@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 40 20% 95%;
+  --foreground: 0 3% 16%;
+  --card: 40 20% 98%;
+  --card-foreground: 0 3% 16%;
+  --popover: 40 20% 98%;
+  --popover-foreground: 0 3% 16%;
+  --primary: 32 85% 62%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 155 23% 40%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 40 10% 90%;
+  --muted-foreground: 0 3% 40%;
+  --accent: 354 35% 53%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 40 10% 85%;
+  --input: 40 10% 85%;
+  --ring: 32 85% 62%;
+  --radius: 0.5rem;
+  
+  --pixel-bg: #f2f1ee;
+  --pixel-dark: #2a2828;
+  --pixel-orange: #f19e4a;
+  --pixel-green: #4f7a6b;
+  --pixel-pink: #b15c65;
+  --pixel-wood: #8b6914;
+  --pixel-wood-light: #c4a35a;
+  --pixel-paper: #faf8f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--pixel-bg);
+  color: var(--pixel-dark);
+  overflow-x: hidden;
+}
+
+.font-pixel {
+  font-family: 'Pixelify Sans', cursive;
+}
+
+/* Wood texture pattern */
+.wood-pattern {
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 105, 20, 0.03) 2px,
+      rgba(139, 105, 20, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 105, 20, 0.03) 2px,
+      rgba(139, 105, 20, 0.03) 4px
+    );
+}
+
+/* Pixel border style */
+.pixel-border {
+  border: 3px solid var(--pixel-dark);
+  box-shadow: 4px 4px 0px 0px var(--pixel-dark);
+}
+
+.pixel-border-sm {
+  border: 2px solid var(--pixel-dark);
+  box-shadow: 2px 2px 0px 0px var(--pixel-dark);
+}
+
+/* Wood frame style */
+.wood-frame {
+  border: 4px solid var(--pixel-wood);
+  border-radius: 8px;
+  box-shadow: 
+    inset 0 0 0 2px var(--pixel-wood-light),
+    0 4px 8px rgba(139, 105, 20, 0.3);
+}
+
+/* Paper note style */
+.paper-note {
+  background: var(--pixel-paper);
+  border: 2px solid var(--pixel-dark);
+  box-shadow: 2px 2px 0px 0px var(--pixel-dark);
+  transform: rotate(-1deg);
+}
+
+.paper-note:nth-child(even) {
+  transform: rotate(1deg);
+}
+
+/* Button press effect */
+.btn-press {
+  transition: all 0.1s ease;
+}
+
+.btn-press:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px 0px var(--pixel-dark);
+}
+
+.btn-press:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0px 0px var(--pixel-dark);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pixel-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pixel-wood);
+  border-radius: 5px;
+  border: 2px solid var(--pixel-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pixel-wood-light);
+}
+
+/* Custom selection */
+::selection {
+  background: var(--pixel-orange);
+  color: white;
+}
+
+/* Typewriter cursor */
+.typewriter-cursor::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Isometric card effect */
+.isometric-card {
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.isometric-card:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(20px);
+}
+
+/* Floating animation variations */
+.float-1 { animation: float 4s ease-in-out infinite; }
+.float-2 { animation: float 5s ease-in-out infinite 0.5s; }
+.float-3 { animation: float 6s ease-in-out infinite 1s; }
+
+/* Sticker/pin effect */
+.pin::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--pixel-pink);
+  border-radius: 50%;
+  border: 2px solid var(--pixel-dark);
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Grid pattern background */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(42, 40, 40, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 40, 40, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 8px 8px 0px 0px var(--pixel-dark);
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .font-pixel {
+    letter-spacing: -0.02em;
+  }
+}
