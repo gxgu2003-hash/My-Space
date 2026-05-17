@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+// ✨ 1. 引入你的图片大管家（如果你的 images.ts 是大写 I，这里写 '@/assets/Images'）
+import { AppImages } from '@/assets/images'; 
 
 export default function Hero() {
   const [displayText, setDisplayText] = useState('');
@@ -57,7 +59,8 @@ export default function Hero() {
           <div className="absolute inset-0 bg-pixel-orange rounded-full animate-breathe opacity-20" />
           <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-pixel-dark shadow-pixel-lg animate-breathe">
             <img
-              src="/avatar.png"
+              // ✨ 2. 核心修改：用大管家的变量代替原来的字符串路径
+              src={AppImages.avatar} 
               alt="顾湘 Avatar"
               className="w-full h-full object-cover"
             />
