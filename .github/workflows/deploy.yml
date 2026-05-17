@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # 检查你发布代码的分支是 main 还是 master，对应修改
+    branches: ["main"] # 💡 注意：如果你的主分支叫 master，请把 main 改成 master
 
 permissions:
   contents: read
@@ -38,7 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # 告诉 GitHub 部署打包生成的 dist 文件夹
+          path: './dist' # 自动寻找并上传打包后的 dist 目录，不再读取根目录的 main.tsx
 
       - name: Deploy to GitHub Pages
         id: deployment
