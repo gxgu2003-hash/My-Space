@@ -50,7 +50,7 @@ export default function Navbar() {
             to="/"
             className="font-pixel text-xl font-bold text-pixel-dark hover:text-pixel-orange transition-colors"
           >
-            顾湘
+            Xiang Gu 顾湘
           </Link>
 
           {/* Desktop Navigation */}
