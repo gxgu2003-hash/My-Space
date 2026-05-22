@@ -4,6 +4,7 @@ import Home from '@/pages/Home';
 import Timeline from '@/pages/Timeline';
 import Thoughts from '@/pages/Thoughts';
 import ThoughtDetail from '@/pages/ThoughtDetail';
+import ProjectDetail from '@/pages/ProjectDetail';
 
 // 💡 补充导入：如果你的主页（Home）已经包含了点击作品弹窗的逻辑，
 // 或者是把 ProjectDetail 单独写在一个文件里，请确保路径正确。
