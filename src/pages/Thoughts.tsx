@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import { Calendar, Tag, ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-// 💡 你的思想源泉数据集：以后写了新文章，直接在这里按格式追加即可！
+// 1. 数据源独立声明在最顶部（确保不会和组件的括号产生嵌套冲突）
 export const thoughtsData = [
   {
     id: 'thought-2',
     date: '2026-05-22',
     title: '独立开发者的第一周：重新思考“树洞”的定义',
     summary: '今天把个人空间（My-Space）的“我在想什么”板块正式上线了。在这个信息过载的时代，为什么我们依然需要一个属于自己的、不受算法打扰的数字自留地？',
-    coverImage: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80', // 你也可以换成你本地 /public/ 中的图片
+    coverImage: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80',
     tags: ['独立开发', '数字生活']
   },
   {
@@ -22,6 +22,7 @@ export const thoughtsData = [
   }
 ];
 
+// 2. 核心渲染组件
 export default function Thoughts() {
   return (
     <div className="min-h-screen bg-pixel-bg flex flex-col justify-between">
@@ -37,7 +38,7 @@ export default function Thoughts() {
           </p>
         </div>
 
-        {/* 微信公众号风格的文章列表流 */}
+        {/* 公众号风格的文章列表流 */}
         <div className="max-w-2xl mx-auto space-y-8">
           {thoughtsData.map((item) => (
             <article 
@@ -100,5 +101,4 @@ export default function Thoughts() {
       <Footer />
     </div>
   );
-}
 }
