@@ -3,7 +3,6 @@ import {
   Heart, 
   MessageSquare, 
   Share2, 
-  Upload, 
   X, 
   Trash2, 
   Image as ImageIcon, 
