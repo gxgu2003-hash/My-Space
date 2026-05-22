@@ -1,5 +1,9 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from '@/components/Navbar';
+import Home from '@/pages/Home';
+import Timeline from '@/pages/Timeline';
 import Thoughts from '@/pages/Thoughts';
-import ThoughtDetail from '@/pages/ThoughtDetail'; // 👈 1. 引入详情页
+import ThoughtDetail from '@/pages/ThoughtDetail';
 
 function App() {
   return (
