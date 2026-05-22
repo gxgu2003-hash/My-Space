@@ -1,10 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from '@/components/Navbar';
-import Home from '@/pages/Home';
-import Timeline from '@/pages/Timeline';
-import ProjectDetail from '@/pages/ProjectDetail';
-import Thoughts from '@/pages/Thoughts'; // 👈 1. 引入新页面
-import './App.css';
+import Thoughts from '@/pages/Thoughts';
+import ThoughtDetail from '@/pages/ThoughtDetail'; // 👈 1. 引入详情页
 
 function App() {
   return (
@@ -14,12 +9,15 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/timeline" element={<Timeline />} />
-          <Route path="/mythoughts" element={<Thoughts />} /> {/* 👈 2. 增加这个平行板块 */}
+          
+          {/* 👈 2. 这两个路由打完美配合 */}
+          <Route path="/mythoughts" element={<Thoughts />} />
+          <Route path="/thought/:id" element={<ThoughtDetail />} /> 
+          
+          <Route path="/myworks" element={<Home />} /> {/* 确保你的 myworks 也有对应的映射 */}
           <Route path="/project/:id" element={<ProjectDetail />} />
         </Routes>
       </div>
     </Router>
   );
 }
-
-export default App;
