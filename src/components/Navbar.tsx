@@ -17,6 +17,8 @@ export default function Navbar() {
 
   const navLinks = [
     { path: '/', label: 'Home' },
+    { path: '/mythoughts', label: 'I am Thinking...' },
+    { path: '/myworks', label: 'What I've Done' },
     { path: '/timeline', label: 'Timeline' },
   ];
 
