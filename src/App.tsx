@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/timeline" element={<Timeline />} />
-          <Route path="/thoughts" element={<Thoughts />} /> {/* 👈 2. 增加这个平行板块 */}
+          <Route path="/mythoughts" element={<Thoughts />} /> {/* 👈 2. 增加这个平行板块 */}
           <Route path="/project/:id" element={<ProjectDetail />} />
         </Routes>
       </div>
