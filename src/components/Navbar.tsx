@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Linkedin, Github, Dribbble, Mail, Menu, X } from 'lucide-react';
+import { Linkedin, Github, Instagram, Mail, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
