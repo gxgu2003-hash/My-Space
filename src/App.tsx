@@ -23,7 +23,7 @@ function App() {
           <Route path="/thought/:id" element={<ThoughtDetail />} />
           
           {/* 作品详情版块（点击木雕、钢结构卡片真正进入的地方） */}
-          <Route path="/myworks" element={<Home />} /> 
+          <Route path="/myworks" element={<Gallary />} /> 
           <Route path="/project/:id" element={<ProjectDetail />} /> {/* 👈 关键：这里必须绑定 ProjectDetail组件！ */}
         </Routes>
       </div>
