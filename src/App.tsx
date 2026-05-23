@@ -2,32 +2,33 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Home from '@/pages/Home';
 import Timeline from '@/pages/Timeline';
-import Thoughts from '@/pages/Thoughts';
-import ThoughtDetail from '@/pages/ThoughtDetail';
-import ProjectDetail from '@/pages/ProjectDetail';
-
-// 💡 补充导入：如果你的主页（Home）已经包含了点击作品弹窗的逻辑，
-// 或者是把 ProjectDetail 单独写在一个文件里，请确保路径正确。
-// 如果尚未创建独立的 ProjectDetail.tsx，通常会先导向主页或者一个已有组件做兜底：
-const ProjectDetail = () => <Home />; 
+import ProjectDetail from '@/pages/ProjectDetail'; // ✅ 1. 引入你写好的真实作品详情
+import Thoughts from '@/pages/Thoughts';             // ✅ 2. 引入你的公众号文章列表
+import ThoughtDetail from '@/pages/ThoughtDetail';   // ✅ 3. 引入带划线批注的文章详情
+import './App.css';
 
 function App() {
   return (
+    // 💡 basename 必须保留，确保线上 GitHub Pages 路径不会报 404
     <Router basename="/My-Space">
       <div className="min-h-screen bg-pixel-bg">
         <Navbar />
         <Routes>
+          {/* 主页与时间轴 */}
           <Route path="/" element={<Home />} />
           <Route path="/timeline" element={<Timeline />} />
+          
+          {/* 树洞文章版块（带微信公众号划线批注功能） */}
           <Route path="/mythoughts" element={<Thoughts />} />
           <Route path="/thought/:id" element={<ThoughtDetail />} />
+          
+          {/* 作品详情版块（点击木雕、钢结构卡片真正进入的地方） */}
           <Route path="/myworks" element={<Home />} /> 
-          <Route path="/project/:id" element={<ProjectDetail />} />
+          <Route path="/project/:id" element={<ProjectDetail />} /> {/* 👈 关键：这里必须绑定 ProjectDetail组件！ */}
         </Routes>
       </div>
     </Router>
   );
 }
 
-// 👈 关键点：补上这个默认导出，解决 main.tsx#L4 的报错
 export default App;
