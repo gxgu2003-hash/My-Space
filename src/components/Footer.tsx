@@ -1,4 +1,4 @@
-import { Linkedin, Github, Dribbble, Mail, Heart } from 'lucide-react';
+import { Linkedin, Github, Instagram, Mail, Menu, X } from 'lucide-react';
 
 export default function Footer() {
   const socialLinks = [
