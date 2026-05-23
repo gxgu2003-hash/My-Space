@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Home from '@/pages/Home';
 import Timeline from '@/pages/Timeline';
+import Gallary from '@/pages/Gallary';
 import ProjectDetail from '@/pages/ProjectDetail'; // ✅ 1. 引入你写好的真实作品详情
 import Thoughts from '@/pages/Thoughts';             // ✅ 2. 引入你的公众号文章列表
 import ThoughtDetail from '@/pages/ThoughtDetail';   // ✅ 3. 引入带划线批注的文章详情
