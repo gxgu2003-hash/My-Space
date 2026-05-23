@@ -23,10 +23,10 @@ export default function Navbar() {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/xiang-gu-eit-58400a272/', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com', label: 'Github' },
-    { icon: Dribbble, href: 'https://dribbble.com', label: 'Dribbble' },
-    { icon: Mail, href: 'mailto:email@example.com', label: 'Email' },
+    { icon: Instagram, href: 'https://www.instagram.com/homelandjam.co?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr', label: 'Instagram' },
+    { icon: Mail, href: 'gxgu2003@gmail.com', label: 'Email' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
